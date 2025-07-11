@@ -1,12 +1,13 @@
 import React from 'react'
 import './Gallery.css';
+import imgVideo from '../../assets/imgVideo.webp';
 
 const Gallery = () => {
     return (
     <>
     <section className="gallery">
         <div className="gallery__images">
-            <img src="./src/assets/imgVideo.webp" alt="Video"/>
+            <img src={imgVideo} alt="Video"/>
         </div>
         <div className="gallery__downloads">
         <h2 className="gallery__title">Descarga Guias</h2>

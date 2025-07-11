@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css';
+import buho from '../../assets/buho-polimaps.png';
 
 const About = () => {
     return (
@@ -12,7 +13,7 @@ const About = () => {
                 </p>
             </div>
             <div class="about__img">
-                <img src="./src/assets/buho-polimaps.png" alt="Imagen Logo Polimaps" loading="lazy"/>
+                <img src={buho} alt="Imagen Logo Polimaps" loading="lazy"/>
             </div>
         </div>
         </header>

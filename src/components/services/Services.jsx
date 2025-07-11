@@ -1,5 +1,6 @@
 import React from 'react'
 import './Services.css';
+import mapa_esfot from '../../assets/mapa-esfot.webp';
 
 const Services = () => {
     return (
@@ -7,7 +8,7 @@ const Services = () => {
         <div className="bar">&nbsp;</div>
         <section className="map">
         <div className="product__img">
-            <img src="./src/assets/mapa-esfot.webp" alt="EPN ESFOT MAPA" loading="lazy"/>
+            <img src={mapa_esfot} alt="EPN ESFOT MAPA" loading="lazy"/>
         </div>
         <div className="services">
             <h2 className="services__title">Servicios</h2>

@@ -4,6 +4,7 @@ import 'animate.css';
 import Main from '../main/Main';
 import { Link } from 'react-router';
 import { useState } from "react"
+import posicion from '../../assets/posicion.png';;
 
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false)
@@ -18,7 +19,7 @@ const Header = () => {
         <header className="navbar">
         <nav className="navbar_container">
             <h1 className="navbar_logo">
-            Pol <img src="./src/assets/posicion.png" alt="ubicacion-logo" /> Maps
+            Pol <img src={posicion} alt="ubicacion-logo" /> Maps
             </h1>
 
             <ul className={`navbar_menu ${menuActive ? "menu--active" : ""}`}>

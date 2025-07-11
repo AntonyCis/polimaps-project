@@ -1,5 +1,6 @@
 import React from 'react'
 import './Main.css';
+import mapa from '../../assets/mapa.png';
 
 const Main = () => {
     return (
@@ -13,7 +14,7 @@ const Main = () => {
                 </p>
                 </div>
                 <div className="hero__image-box">
-                <img src="./src/assets/mapa.png" alt="Mapa EPN" />
+                <img src={mapa} alt="Mapa EPN" />
             </div>
             </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css';
+import esfot from '../../assets/ESFOT.avif';
 
 const Footer = () => {
     return (
@@ -24,7 +25,7 @@ const Footer = () => {
             </div>
 
             <div class="footer__contact">
-                <img src="./src/assets/ESFOT.avif" alt=""/>
+                <img src={esfot} alt=""/>
                 <h3>Contacto</h3>
                 <p class="write">polimaps@gmail.com</p>
             </div>
