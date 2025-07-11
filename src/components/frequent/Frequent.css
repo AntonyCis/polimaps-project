@@ -1,0 +1,46 @@
+.frequent {
+    background-color: #fff;
+}
+
+.frequent__container {
+    padding: 2rem 1rem;
+}
+
+.frequent__title {
+    text-decoration: underline;
+    padding-bottom: 1rem;
+}
+
+.frequent__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.frequent__item {
+    background-color: #cccccc;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;  
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-left: 4px solid transparent;
+    transition: border-color 0.3s;
+    cursor: pointer;
+}
+
+@media (width >= 768px) {
+    .frequent__container {
+        padding: 2rem 2.5rem;
+    }
+    .fa,
+    .frequent__item {
+        justify-content: space-between;
+    }
+}

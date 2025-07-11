@@ -1,0 +1,135 @@
+.navbar {
+    background-color: #002a5c;
+    background-image: url("./src/assets/fondo-mundo.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.navbar_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar_logo {
+    color: var(--colorUno);
+    cursor: pointer;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.navbar_logo img {
+    height: 1.5rem;
+    width: auto;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar_menu li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+.navbar_menu li a {
+    color: #ea4a3f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar_menu li a:hover {
+    color: var(--colorDos);
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.header__hamburger {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--colorUno);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.navbar_phrase {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.navbar_phrase h2 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .navbar_container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar_menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        opacity: 1;
+        max-height: none;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    .navbar_menu li {
+        margin: 0;
+    }
+
+    .header__hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar_menu {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 1.5rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .menu--active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}

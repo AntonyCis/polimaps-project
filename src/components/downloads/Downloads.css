@@ -1,0 +1,125 @@
+.app {
+    background-color: #fff;
+}
+
+/* CONTENEDOR GENERAL */
+.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* TÍTULO CON CUADRO GRIS SIEMPRE */
+.mobile__title {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile__title:hover {
+    background-color: #d0d0d0;
+    transform: scale(1.02);
+}
+
+/* BOTONES */
+.mobile__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mobile__buttons:hover {
+    cursor: pointer;
+}
+
+.ps,
+.gp {
+    transition: transform 0.3s ease;
+}
+
+.ps:hover,
+.gp:hover {
+    transform: translateY(-5px);
+}
+
+.access__button {
+    background-color: var(--colorDos);      
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.access__button:hover {
+    background-color: #e53935;       
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.access__button:active {
+    transform: scale(0.97);
+}
+
+
+@media (min-width: 768px) {
+    .mobile {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem 3rem;
+        gap: 4rem;
+        text-align: left;
+    }
+
+    .mobile__title {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .mobile__buttons {
+        justify-content: flex-start;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .mobile {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem 10rem;
+        gap: 10rem;
+        text-align: left;
+    }
+
+    .mobile__title {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+@media (width = 1080px) {
+    .mobile {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem 12rem;
+        gap: 10rem;
+        text-align: left;
+    }
+}
