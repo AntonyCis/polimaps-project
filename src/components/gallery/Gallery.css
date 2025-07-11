@@ -1,6 +1,6 @@
 .gallery {
     background-color: #002a5c;
-    background-image: url("./src/assets/fondo-mundo.png");
+    background-image: url("../../assets/fondo-mundo.png");
 }
 
 .gallery__title {

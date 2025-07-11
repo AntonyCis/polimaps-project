@@ -1,7 +1,7 @@
 .map {
     margin: 0;
     background-color: #002a5c;
-    background-image: url("./src/assets/fondo-mundo.png");
+    background-image: url("../../assets/fondo-mundo.png");
     background-size: cover;
     background-position: center;
     padding: 2rem 1rem;
