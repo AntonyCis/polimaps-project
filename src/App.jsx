@@ -1,16 +1,25 @@
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import Memes from './pages/Memes';
+import { authFirebase } from './firebase'
 
 
 function App() {
+
+  const [user, setUser] = useState("")
+
+  useEffect(() => {
+    authFirebase.onAuthStateChanged((user)=>{
+      setUser(user)
+    })
+  }, [])
 
   useEffect(() => {
     AOS.init({
@@ -26,7 +35,7 @@ function App() {
         <Route index element={<Landing />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={user ? <Dashboard /> : <Navigate to='/login'/>} />
         <Route path="memes" element={<Memes />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
