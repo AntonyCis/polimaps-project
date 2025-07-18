@@ -47,7 +47,7 @@ const Login = () => {
 
         <p>
           ¿No tienes una cuenta?{" "}
-          <NavLink to="/registro" className="enlace">
+          <NavLink to="/register" className="enlace">
             Regístrate aquí
           </NavLink>
         </p>
